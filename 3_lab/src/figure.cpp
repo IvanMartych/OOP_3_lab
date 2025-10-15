@@ -1,15 +1,15 @@
 #include "../include/figure.h"
+#include <ostream>
 
 
-Figure::Figure(){
-    this->points[0] = Point(0, 0);
-    this->points[1] = Point(0, 0);
-    this->points[2] = Point(0, 0);
+std::ostream& operator<<(std::ostream& output, Figure &figure){
+    figure.print(output);
+    return  output;
+}
+
+std::istream& operator>>(std::istream& input, Figure &figure){
+    figure.read(input);
+    return input;
 }
 
 
-Figure::Figure(const Point &p1, const Point &p2, const Point &p3){
-    this->points[0] = p1;
-    this->points[1] = p2;
-    this->points[2] = p3;
-}
