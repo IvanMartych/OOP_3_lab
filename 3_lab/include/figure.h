@@ -29,8 +29,6 @@ class Figure{
         */
         virtual double area_of_figure() const = 0; 
         virtual Point center_of_figure() const = 0; 
-        
-
         // деструктор
         virtual ~Figure() = default;
 };

@@ -11,5 +11,5 @@ class Point{
         double x; // координата по оси x
         double y; // координата по оси y
         friend std::ostream& operator<<(std::ostream& output, const Point &p);
-        friend std::istream& operator>>(std::istream& input, Point &p);
+        friend std::istream& operator>>(std::istream& input, Point &p);\
 };
