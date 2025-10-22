@@ -47,35 +47,16 @@ void Array_of_figures::add_figure(Figure *figure){
 }
 
 bool Array_of_figures::delete_figure_by_index(size_t index){
-    // if (index >= number_of_figures){
-    //     return false;
-    // } else if (index == (array_capacity - 1) && figures[index] != nullptr) {
-    //     delete figures[index];
-    //     figures[index] = nullptr;
-    //     number_of_figures--;
-        
-    //     return true;
-    // } else {
-    //     delete figures[index];
-    //     figures[index] = nullptr;
-    // }
-        
-    // for (size_t i = index; i < (array_capacity - 1); i++){
-    //     figures[i] = figures[i+1];
-    // }
-    // number_of_figures--;
-    // return true;
-    
     if (index >= number_of_figures){
         return false;
     }
     delete figures[index];
     
     for (size_t i = index; i < number_of_figures - 1; i++){
-        figures[i] = figures[i + 1];
+        figures[i] = figures[i+1];
     }
     
-    figures[number_of_figures - 1] = nullptr;
+    figures[number_of_figures-1] = nullptr;
     number_of_figures--;
     
     return true;

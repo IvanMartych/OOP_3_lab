@@ -10,22 +10,22 @@ class Rhomb: public Figure{
         Point points[4];
 
     public:
-        Rhomb(); // реализовано 
-        Rhomb(const Point &p1, const Point &p2, const Point &p3, const Point &p4); // реализовано 
+        Rhomb(); 
+        Rhomb(const Point &p1, const Point &p2, const Point &p3, const Point &p4); 
 
-        void print(std::ostream& output) const override; // реализовано 
-        void read(std::istream& input) override; // реализовано 
+        void print(std::ostream& output) const override; 
+        void read(std::istream& input) override; 
         /*
         Фигуры должны иметь переопределенные операции копирования (=), перемещения (=) и 
         сравнения (==) 
         */
-        Rhomb& operator=(const Rhomb& other); // реализовано
-        Rhomb& operator=(const Rhomb&& other) noexcept; // реализовано
-        bool operator==(const Rhomb& other)const noexcept; // реализовано 
+        Rhomb& operator=(const Rhomb& other);
+        Rhomb& operator=(Rhomb&& other) noexcept; 
+        bool operator==(const Rhomb& other)const noexcept; 
 
-        double area_of_figure() const override; // реализовано 
-        Point center_of_figure() const override; // реализовано 
+        double area_of_figure() const override; 
+        Point center_of_figure() const override; 
 
-        ~Rhomb() override = default; // так как точка у нас не динамический объект, то дефолтный деструктор полностью почистит ромб, без утечки памяти
+        ~Rhomb() override = default; 
 }; 
 

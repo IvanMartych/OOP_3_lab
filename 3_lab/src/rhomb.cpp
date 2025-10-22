@@ -41,7 +41,7 @@ Rhomb& Rhomb::operator=(const Rhomb& other){
     return *this;
 }
 
-Rhomb& Rhomb::operator=(const Rhomb&& other) noexcept{
+Rhomb& Rhomb::operator=(Rhomb&& other) noexcept{
     if (this != &other){
         for (int i = 0; i < 4; i++){
             points[i] = std::move(other.points[i]);

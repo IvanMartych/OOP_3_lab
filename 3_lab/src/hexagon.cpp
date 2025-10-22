@@ -43,7 +43,7 @@ Hexagon& Hexagon::operator=(const Hexagon& other){
     return *this;
 }
 
-Hexagon& Hexagon::operator=(const Hexagon&& other) noexcept{
+Hexagon& Hexagon::operator=(Hexagon&& other) noexcept{
     if (this != &other){
         for (int i = 0; i < 6; i++){
             points[i] = std::move(other.points[i]);
@@ -74,8 +74,15 @@ double Hexagon::area_of_figure() const{
     return result;
 }
 
+
+
 Point Hexagon::center_of_figure() const{
-    return Point((points[0].x + points[3].x)/2, (points[0].y + points[3].y)/2);
+        double x_sum = 0.0, y_sum = 0.0;
+    for (int i = 0; i < 6; i++){
+        x_sum += points[i].x;
+        y_sum += points[i].y;
+    }
+    return Point((x_sum)/6, (y_sum)/6);
 }
 
 

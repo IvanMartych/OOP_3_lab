@@ -10,22 +10,19 @@ class Pentagon: public Figure{
         Point points[5];
 
     public:
-        Pentagon(); // переделано
-        Pentagon(const Point &p1, const Point &p2, const Point &p3, const Point &p4, const Point &p5); // переделано
+        Pentagon(); 
+        Pentagon(const Point &p1, const Point &p2, const Point &p3, const Point &p4, const Point &p5); 
 
-        void print(std::ostream& output) const override; // переделано
-        void read(std::istream& input) override; // переделано
-        /*
-        Фигуры должны иметь переопределенные операции копирования (=), перемещения (=) и 
-        сравнения (==) 
-        */
-        Pentagon& operator=(const Pentagon& other); // переделано
-        Pentagon& operator=(const Pentagon&& other) noexcept; // переделано
-        bool operator==(const Pentagon& other)const  noexcept; // переделано
+        void print(std::ostream& output) const override; 
+        void read(std::istream& input) override; 
+       
+        Pentagon& operator=(const Pentagon& other);
+        Pentagon& operator=(Pentagon&& other) noexcept; 
+        bool operator==(const Pentagon& other)const  noexcept; 
 
-        double area_of_figure() const override;  // переделано
-        Point center_of_figure() const override; // переделано
+        double area_of_figure() const override; 
+        Point center_of_figure() const override; 
 
-        ~Pentagon() override = default; // так как точка у нас не динамический объект, то дефолтный деструктор полностью почистит ромб, без утечки памяти
+        ~Pentagon() override = default; 
 }; 
 

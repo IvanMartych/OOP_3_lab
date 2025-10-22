@@ -10,22 +10,22 @@ class Hexagon: public Figure{
         Point points[6];
 
     public:
-        Hexagon(); // переделано
-        Hexagon(const Point &p1, const Point &p2, const Point &p3, const Point &p4, const Point &p5, const Point &p6); // переделано
+        Hexagon(); 
+        Hexagon(const Point &p1, const Point &p2, const Point &p3, const Point &p4, const Point &p5, const Point &p6); 
 
-        void print(std::ostream& output) const override; // переделано
-        void read(std::istream& input) override; // переделано
+        void print(std::ostream& output) const override; 
+        void read(std::istream& input) override; 
         /*
         Фигуры должны иметь переопределенные операции копирования (=), перемещения (=) и 
         сравнения (==) 
         */
-        Hexagon& operator=(const Hexagon& other); // переделано
-        Hexagon& operator=(const Hexagon&& other) noexcept; // переделано
-        bool operator==(const Hexagon& other)const  noexcept;  // переделано
+        Hexagon& operator=(const Hexagon& other);
+        Hexagon& operator=(Hexagon&& other) noexcept; 
+        bool operator==(const Hexagon& other)const  noexcept;  
 
-        double area_of_figure() const override;  // переделано
-        Point center_of_figure() const override;  // переделано
+        double area_of_figure() const override;  
+        Point center_of_figure() const override;  
 
-        ~Hexagon() override = default; // так как точка у нас не динамический объект, то дефолтный деструктор полностью почистит ромб, без утечки памяти
+        ~Hexagon() override = default;
 }; 
 

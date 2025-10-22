@@ -44,7 +44,7 @@ Pentagon& Pentagon::operator=(const Pentagon& other){
     return *this;
 }
 
-Pentagon& Pentagon::operator=(const Pentagon&& other) noexcept{
+Pentagon& Pentagon::operator=(Pentagon&& other) noexcept{
     if (this != &other){
         for (int i = 0; i < 5; i++){
             points[i] = std::move(other.points[i]);
