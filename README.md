@@ -107,9 +107,6 @@ cmake --build .
 ## Запуск тестов:
 
 ```bash
-# Из директории build/tasks/Laboratory_2
+# Из директории build
 ./3_lab_tests
-
-# Или через CTest
-ctest --verbose
 ```
