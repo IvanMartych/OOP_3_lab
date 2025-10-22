@@ -1,7 +1,7 @@
 {
     "name": "C++ labs",
-    "image": "oop_labs_image:latest",
-    // "dockerFile": "Dockerfile",
+    // "image": "oop_labs_image:latest",
+    "dockerFile": "Dockerfile",
     "context": "..",
     "appPort": [],
     "extensions": [
